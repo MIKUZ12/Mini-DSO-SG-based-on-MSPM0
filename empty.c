@@ -53,19 +53,19 @@ unsigned char stra[] = "amp:";
 unsigned char strp[] = "phase:";
 unsigned char Param[] = "param:";
 unsigned char Fmode[] = "fmode:";
-/***********oled成功示例*******************/
+/***********oled??????*******************/
 int main(void)
 {
-    //开发板初始化
+    //??????????
     board_init();
-    OLED_Init();    //初始化OLED
+    OLED_Init();    //?????OLED
     OLED_Clear();
 	
 		SYSCFG_DL_init();
         
-    //清除串口中断标志
+    //????????ж???
     NVIC_ClearPendingIRQ(UART_0_INST_INT_IRQN);
-    //开启串口中断
+    //?????????ж?
     NVIC_EnableIRQ(UART_0_INST_INT_IRQN);
 
 		NVIC_EnableIRQ(GPIO_MULTIPLE_GPIOA_INT_IRQN);
@@ -280,7 +280,7 @@ void SG(void)
 						FLAG = 1;
 						wave_fre = Encoder_Count1*10;
 					  wave_fre %= 1001;
-//						if(!DL_GPIO_readPins(KEY_PORT, KEY_KEY1_PIN))//采用key1按键，即旋转编码器按键
+//						if(!DL_GPIO_readPins(KEY_PORT, KEY_KEY1_PIN))//????key1?????????????????????
 //						{
 //							delay_us(1);
 //							if(!DL_GPIO_readPins(KEY_PORT, KEY_KEY1_PIN))
